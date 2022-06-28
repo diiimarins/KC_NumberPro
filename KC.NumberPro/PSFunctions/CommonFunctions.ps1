@@ -17,8 +17,7 @@
 
     $ErrorMsg = $null
     Try {
-        $Invoke = Invoke-RestMethod -Uri $ApiRoute -Method Get -DisableKeepAlive -TimeoutSec 600 -Credential $Credential -AllowUnencryptedAuthentication
-        
+        $Invoke = Invoke-RestMethod -Uri $ApiRoute -Method Get -DisableKeepAlive -TimeoutSec 600 -Credential $Credential
     }
     Catch {
         $ErrorMsg = $_.Exception.Message
@@ -64,7 +63,7 @@ Function RequestNPCredential {
     
     $ErrorMsg = $null
     Try {
-        $Invoke = Invoke-RestMethod -Uri "http://ustwaw675:8080/2n" -Method Get -DisableKeepAlive -TimeoutSec 600 -Credential $Credential -AllowUnencryptedAuthentication
+        $Invoke = Invoke-RestMethod -Uri "http://ustwaw675:8080/2n" -Method Get -DisableKeepAlive -TimeoutSec 600 -Credential $Credential 
     }
     Catch {
         $ErrorMsg = $_.Exception.Message
